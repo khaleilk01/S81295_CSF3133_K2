@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI & Innovation Hackathon 2026</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>AI & Innovation Hackathon 2026</h1>
+        <p>Empowering future technologists through collaborative problem-solving and coding.</p>
+    </header>
+
+    <!-- Navigation Section with Internal Links -->
+    <nav>
+        <ul>
+            <li><a href="#about">About the Event</a></li>
+            <li><a href="#schedule">Event Schedule</a></li>
+            <li><a href="#register">Registration</a></li>
+        </ul>
+    </nav>
+
+    <!-- About the Event Section containing two articles -->
+    <section id="about">
+        <h2>About the Event</h2>
+        <p>Welcome to the annual Faculty Hackathon where students build innovative solutions to real-world challenges.</p>
+        
+        <!-- Article 1: Speaker -->
+        <article>
+            <h3>Keynote Speaker: Dr. Zulkifli Ahmad</h3>
+            <p>Dr. Zulkifli is an expert in Artificial Intelligence and machine learning applications in modern industries.</p>
+        </article>
+
+        <!-- Article 2: Activity -->
+        <article>
+            <h3>Featured Activity: 12-Hour Coding Sprint</h3>
+            <p>Participants will collaborate in teams to design, develop, and pitch working prototypes.</p>
+        </article>
+    </section>
+
+    <!-- Event Schedule Section with Table (Colspan & Rowspan) -->
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Venue</th>
+                    <th>Person in Charge</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:00 AM - 09:00 AM</td>
+                    <td>Registration & Breakfast</td>
+                    <td rowspan="2">Main Hall</td>
+                    <td>Dr. Aminah</td>
+                </tr>
+                <tr>
+                    <td>09:00 AM - 10:30 AM</td>
+                    <td>Opening Ceremony & Keynote</td>
+                    <td>Prof. Razak</td>
+                </tr>
+                <tr>
+                    <td>10:30 AM - 01:00 PM</td>
+                    <td>Coding Sprint Begins</td>
+                    <td>Lab 3</td>
+                    <td>Puan Nurul</td>
+                </tr>
+                <tr>
+                    <td>01:00 PM - 02:00 PM</td>
+                    <td colspan="3">Lunch Break & Networking</td>
+                </tr>
+                <tr>
+                    <td>02:00 PM - 05:00 PM</td>
+                    <td>Project Development & Mentorship</td>
+                    <td>Lab 3</td>
+                    <td>Ms. Siti</td>
+                </tr>
+                <tr>
+                    <td>05:00 PM - 06:30 PM</td>
+                    <td>Pitching & Closing Ceremony</td>
+                    <td>Main Hall</td>
+                    <td>Dean Faculty</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Registration Section with Form -->
+    <section id="register">
+        <h2>Registration</h2>
+        <form action="register.html" method="post">
+            <div>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div>
+                <label for="matric">Matric Number:</label>
+                <input type="text" id="matric" name="matric" required>
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label>Year of Study:</label><br>
+                <input type="radio" id="year1" name="year_study" value="Year 1">
+                <label for="year1">Year 1</label><br>
+                <input type="radio" id="year2" name="year_study" value="Year 2">
+                <label for="year2">Year 2</label><br>
+                <input type="radio" id="year3" name="year_study" value="Year 3">
+                <label for="year3">Year 3</label><br>
+                <input type="radio" id="year4" name="year_study" value="Year 4">
+                <label for="year4">Year 4</label>
+            </div>
+            <div>
+                <label>Sessions to Join:</label><br>
+                <input type="checkbox" id="session1" name="sessions" value="Keynote">
+                <label for="session1">Keynote & Opening</label><br>
+                <input type="checkbox" id="session2" name="sessions" value="Sprint">
+                <label for="session2">Coding Sprint</label><br>
+                <input type="checkbox" id="session3" name="sessions" value="Pitching">
+                <label for="session3">Pitching & Closing</label>
+            </div>
+            <div>
+                <label for="programme">Programme:</label>
+                <select id="programme" name="programme">
+                    <option value="SE">Software Engineering</option>
+                    <option value="CS">Computer Science</option>
+                    <option value="IT">Information Technology</option>
+                    <option value="DS">Data Science</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="Register Now">
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Organised by Faculty of Computer Science and Mathematics, UMT. &copy; 2026 All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
