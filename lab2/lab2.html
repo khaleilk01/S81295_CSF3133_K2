@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Profile Page - Lab Exercise 2</title>
+</head>
+<body>
 
+    <!-- Task 3: Semantic Header -->
+    <header>
+        <h1>My Personal Profile</h1>
+        <p>Lab Exercise 2: Tables, Forms, and Semantic HTML</p>
+    </header>
+
+    <!-- Task 3: Semantic Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#profile-table">Profile Details</a></li>
+            <li><a href="#contact-form">Get in Touch</a></li>
+        </ul>
+    </nav>
+
+    <!-- Task 3: Semantic Sections and Articles -->
+    <section id="about">
+        <h2>About Me</h2>
+        <article>
+            <h3>Introduction</h3>
+            <p>Welcome to my personal profile page! This page showcases my basic information, professional background, and personal interests.</p>
+        </article>
+        <article>
+            <h3>Background</h3>
+            <p>I am an aspiring web developer and computer science student passionate about building clean, accessible, and responsive websites.</p>
+        </article>
+    </section>
+
+    <!-- Task 1: Create a table with at least 3 rows and 3 columns for personal info -->
+    <section id="profile-table">
+        <h2>Personal Information Summary</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Details</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td>Alex Johnson</td>
+                    <td>Personal</td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>21</td>
+                    <td>Personal</td>
+                </tr>
+                <tr>
+                    <td>Occupation</td>
+                    <td>Software Engineering Student</td>
+                    <td>Professional</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>Kuala Terengganu, Malaysia</td>
+                    <td>Personal</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Task 2: Design a simple form with text input, radio buttons, checkboxes, and submit button -->
+    <section id="contact-form">
+        <h2>Contact & Profile Survey</h2>
+        <form action="#" method="post">
+            <!-- Text Inputs for Name and Email -->
+            <div>
+                <label for="fullname">Name:</label><br>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <br>
+            <div>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <br>
+
+            <!-- Radio Buttons for Gender -->
+            <div>
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
+            <br>
+
+            <!-- Checkboxes for Favorite Hobbies -->
+            <div>
+                <label>Favorite Hobbies:</label><br>
+                <input type="checkbox" id="hobby1" name="hobbies" value="coding">
+                <label for="hobby1">Coding</label><br>
+                <input type="checkbox" id="hobby2" name="hobbies" value="reading">
+                <label for="hobby2">Reading</label><br>
+                <input type="checkbox" id="hobby3" name="hobbies" value="gaming">
+                <label for="hobby3">Gaming</label><br>
+                <input type="checkbox" id="hobby4" name="hobbies" value="photography">
+                <label for="hobby4">Photography</label>
+            </div>
+            <br>
+
+            <!-- Submit Button -->
+            <div>
+                <input type="submit" value="Submit Information">
+            </div>
+        </form>
+    </section>
+
+    <!-- Task 3: Semantic Footer -->
+    <footer>
+        <p>&copy; 2026 Alex Johnson. Built for Lab Exercise 2.</p>
+    </footer>
+
+</body>
+</html>
