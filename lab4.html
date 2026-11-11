@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 0;
+        }
+        header {
+            background-color: #0f172a;
+            color: #fff;
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Link States */
+        nav a:hover {
+            color: #fff;
+            background-color: #334155;
+            text-decoration: none;
+        }
+
+        nav a:active {
+            background-color: #475569;
+        }
+
+        /* Main Content Layout */
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background: #ffffff;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        section h2 {
+            color: #0f172a;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        article h3 {
+            color: #1e293b;
+            margin-bottom: 0.8rem;
+        }
+
+        .form-article {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px dashed #cbd5e1;
+        }
+
+        /* Media Styling */
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #000;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .caption {
+            font-size: 0.9rem;
+            color: #64748b;
+            text-align: center;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        /* Form Styling */
+        .styled-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            max-width: 500px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #334155;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        /* Fieldset & Options Styling */
+        .form-fieldset {
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            padding: 1rem 1.2rem;
+        }
+
+        .form-fieldset legend {
+            font-weight: 600;
+            color: #334155;
+            padding: 0 0.4rem;
+        }
+
+        .options-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 0.4rem;
+        }
+
+        .option-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: normal;
+            color: #1e293b;
+            cursor: pointer;
+        }
+
+        .option-label input[type="radio"],
+        .option-label input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: #2563eb;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            background-color: #2563eb;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            align-self: flex-start;
+        }
+
+        .submit-btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Queries */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            header {
+                padding: 1rem;
+            }
+
+            section {
+                padding: 1.2rem;
+            }
+        }
+        </style>
+        <title>Responsive webpage</title>
+
+    </head>
+    <body>
+        <header>This is a header. An image can also be placed here.</header>
+        <nav>
+            <ul>
+                <li><a href="#structure">Structure & Semantics</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#form-section">Form</a></li>
+            </ul>
+        </nav>
+    </body>
+    <section id="structure">
+            <h2>Structure & Semantics</h2>
+            <article>
+                <h3>HTML5 Semantic Elements</h3>
+                <p>This lab utilizes modern HTML5 structural elements such as <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code> to create an accessible and well-organized document tree.</p>
+            </article>
+        </section>
+
+    <section id="media">
+        <h2>This is section 3/media.</h2>
+        <video width="1080" height="720" controls>
+            <source src="Jumpscare_Kek.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section id="form-section">
+            <h2>This is section 5.</h2>
+            <!-- Contact Form -->
+            <article>
+                <h3>Contact Form</h3>
+                <form action="#" method="POST" class="styled-form">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Form</button>
+                </form>
+            </article>
+
+            <!-- User Preferences Form (New Form Added) -->
+            <article class="form-article">
+                <h3>User Preferences Form</h3>
+                <form action="#" method="POST" class="styled-form">
+                    
+                    <!-- Gender Radio Buttons -->
+                    <fieldset class="form-fieldset">
+                        <legend>Gender</legend>
+                        <div class="options-group">
+                            <label class="option-label">
+                                <input type="radio" name="gender" value="male" required> Male
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="gender" value="female"> Female
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Favorite Hobbies Checkboxes -->
+                    <fieldset class="form-fieldset">
+                        <legend>Favorite Hobbies</legend>
+                        <div class="options-group">
+                            <label class="option-label">
+                                <input type="checkbox" name="hobbies" value="reading"> Reading
+                            </label>
+                            <label class="option-label">
+                                <input type="checkbox" name="hobbies" value="sports"> Sports & Fitness
+                            </label>
+                            <label class="option-label">
+                                <input type="checkbox" name="hobbies" value="gaming"> Gaming
+                            </label>
+                            <label class="option-label">
+                                <input type="checkbox" name="hobbies" value="music"> Music & Arts
+                            </label>
+                            <label class="option-label">
+                                <input type="checkbox" name="hobbies" value="traveling"> Traveling
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="submit-btn">Submit </button>
+                </form>
+    <footer>
+        &copy; Copyright 2026.
+        <address>
+            Contact us via <a href="mailto:S81295@umt.edu.my">my email</a>
+        </address>
+    </footer>
+</html>
